@@ -1,0 +1,22 @@
+.Recipe_content{
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgb(71,71,71);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: white;
+    min-width: 25%;
+}
+
+.centre {
+    align-items: center;
+}
+
+.list-group-item {
+    float: left;
+    border: 0 !important;
+    margin: 0px;
+    padding: 10px 0px;
+}
+
