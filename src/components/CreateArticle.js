@@ -43,6 +43,11 @@ class CreateArticle extends React.Component {
             alert("Title can not be empty!")
             return;
         }
+
+        if(!localStorage.getItem(ID)){
+            alert("Please Login before create articles")
+            return;
+        }
         const url = `${URL}/create/`;
         // let history = useHistory();
 
@@ -74,6 +79,7 @@ class CreateArticle extends React.Component {
             )
             .catch(
                 err => {
+                    alert("Get Articles Failed");
                     console.log("Get Articles Failed: ", err);
                 }
             )
