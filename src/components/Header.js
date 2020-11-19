@@ -25,7 +25,7 @@ class Header extends React.Component {
 
     showMenu = () => {
         //if user is logged in, then show logged out
-        if (this.props.isLoggedIn) {
+        if (localStorage.getItem(ID)) {
             return <div>
                 <Dropdown.Item className="dropdown-item" type="button" >
                     <Link className="blog_item_link" to={{
