@@ -1,11 +1,8 @@
 import React from 'react';
-import {ID, TOKEN_KEY, URL} from "../constants";
+import {ID, URL} from "../constants";
 import Axios from "axios";
 import ImageUploader from 'react-images-upload';
-import {Button} from "react-bootstrap";
-import {Link, Route} from "react-router-dom";
-import {Message} from "@material-ui/icons";
-import Blog from "./Blog";
+import {Link} from "react-router-dom";
 
 class CreateArticle extends React.Component {
 
@@ -62,14 +59,10 @@ class CreateArticle extends React.Component {
                     console.log("Response: ", response);
                     if (response.data.status === "fail") {
                         console.log("Response contains fail status");
-
+                        alert("Create Failed")
                     } else {
                         console.log("gonna return");
-                        // Message("Create Successfully!");
-                        // history.push('/blogs');
-                        // <Route exact path="/blogs">
-                        //     <Blog />
-                        // </Route>
+                        alert("Create Successfully!")
                         return response.data;
                     }
                 }
@@ -105,7 +98,7 @@ class CreateArticle extends React.Component {
                     {/*content*/}
                     <div className="form-group">
                         <textarea className="form-control" type="textarea" id="content" placeholder="Enter your content here..."
-                                  maxLength="140" rows="10"
+                                  maxLength="10000" rows="10"
                                   onChange={this.handleSubjectChange}></textarea>
                     </div>
                     <ImageUploader

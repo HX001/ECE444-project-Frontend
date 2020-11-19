@@ -28,7 +28,6 @@ const Article = (props) => {
 
     // this function will be called automatically with a given article number, article number is unique in database
     const handleGetArticle = async (ariticleNumber) => {
-        // ariticleNumber = '5fad975ddffdcf21094ac509';
         console.log("Article ID is: ", ariticleNumber)
         const url = `${URL}/articles/`;
 
