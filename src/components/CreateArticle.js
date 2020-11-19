@@ -38,6 +38,11 @@ class CreateArticle extends React.Component {
 
     handleBlogCreate = (e) =>{
         console.log("In create blog");
+        console.log("Title: ", this.state.title)
+        if(!this.state.title.toString()){
+            alert("Title Can not be empty!")
+            return;
+        }
         const url = `${URL}/create/`;
         // let history = useHistory();
 
